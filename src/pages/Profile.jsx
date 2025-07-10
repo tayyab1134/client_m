@@ -187,7 +187,7 @@ export default function Profile() {
   const handleShowListings = async () => {
     try {
       setShowListingsError(false);
-      const res = await fetch(`https://backend-mernestate.vercel.app/api/user/listings/${currentUser._id}`);
+      const res = await fetch(`https://backend-mernestate.vercel.app/api/user/listing/${currentUser._id}`);
       const data = await res.json();
       if (data.success === false) {
         setShowListingsError(true);
